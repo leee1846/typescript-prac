@@ -1,10 +1,7 @@
 import React from "react";
 import TodoListItem from "./TodoListItem";
-
-type Todo = {
-  text: string;
-  complete: boolean;
-};
+//types
+import { Todo } from "./types";
 
 const todos: Array<Todo> = [
   { text: "walk the dog", complete: true },
