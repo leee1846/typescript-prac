@@ -12,11 +12,15 @@ const TodoListItem: React.FC<TodoListItemProps> = ({
   index,
 }) => {
   return (
-    <li onClick={(e) => toggleTodo(index)}>
+    <li>
       <label
         style={{ textDecoration: todo.complete ? "line-through" : "none" }}
       >
-        <input type='checkbox' checked={todo.complete} />
+        <input
+          type='checkbox'
+          checked={todo.complete}
+          onChange={(e) => toggleTodo(index)}
+        />
         {todo.text}
       </label>
     </li>

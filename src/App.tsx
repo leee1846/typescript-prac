@@ -10,7 +10,7 @@ const initialTodos: Array<Todo> = [
 const App: React.FC = () => {
   const [todos, setTodos] = useState(initialTodos);
 
-  const toggleTodo = (clickedIndex: number) => {
+  const toggleTodo: ToggleTodo = (clickedIndex) => {
     setTodos(
       todos.map((todo: Todo, index: number) => {
         if (index === clickedIndex) {
