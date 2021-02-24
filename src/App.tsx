@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import TodoList from "./TodoList";
 import TodoListItem from "./TodoListItem";
 //types
 
@@ -23,9 +24,7 @@ const App: React.FC = () => {
 
   return (
     <>
-      {todos.map((todo, index) => (
-        <TodoListItem todo={todo} toggleTodo={toggleTodo} index={index} />
-      ))}
+      <TodoList todos={todos} toggleTodo={toggleTodo} />
     </>
   );
 };
