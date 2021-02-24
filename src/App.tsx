@@ -30,7 +30,7 @@ const App: React.FC = () => {
   return (
     <>
       <TodoList todos={todos} toggleTodo={toggleTodo} />
-      <AddTodoForm addTodo={addTodo} />
+      <AddTodoForm addTodo={addTodo} setTodos={setTodos} />
     </>
   );
 };
