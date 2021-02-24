@@ -1,18 +1,25 @@
-import React, { useState, ChangeEvent } from "react";
+import React, { useState, ChangeEvent, FormEvent } from "react";
 
-type AddTodoFormProps = {};
+type AddTodoFormProps = {
+  addTodo: AddTodo;
+};
 
-const AddTodoForm: React.FC<AddTodoFormProps> = ({}) => {
+const AddTodoForm: React.FC<AddTodoFormProps> = ({ addTodo }) => {
   const [newTodo, setNewTodo] = useState<string>("");
 
   const handleCahnge = (e: ChangeEvent<HTMLInputElement>) => {
     setNewTodo(e.target.value);
   };
 
+  const handleSubmit = (e: FormEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    addTodo(newTodo);
+  };
+
   return (
     <form>
       <input type='text' onChange={handleCahnge} value={newTodo} />
-      <button>add todo</button>
+      <button onClick={handleSubmit}>add todo</button>
     </form>
   );
 };
