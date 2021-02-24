@@ -1,7 +1,6 @@
 import React from "react";
 import TodoListItem from "./TodoListItem";
 //types
-import { Todo } from "./types";
 
 const todos: Array<Todo> = [
   { text: "walk the dog", complete: true },
@@ -11,7 +10,9 @@ const todos: Array<Todo> = [
 const App: React.FC = () => {
   return (
     <div>
-      <TodoListItem />
+      {todos.map((todo) => (
+        <TodoListItem todo={todo} />
+      ))}
     </div>
   );
 };
