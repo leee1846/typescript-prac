@@ -2,7 +2,7 @@ import React from "react";
 
 type TodoListItemProps = {
   todo: Todo;
-  toggleTodo: (clickedIndex: number) => void;
+  toggleTodo: ToggleTodo;
   index: number;
 };
 
