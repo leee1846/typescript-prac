@@ -5,6 +5,7 @@ import React, {
   Dispatch,
   SetStateAction,
 } from "react";
+import Button from "./Button";
 
 type AddTodoFormProps = {
   addTodo: AddTodo;
@@ -32,8 +33,8 @@ const AddTodoForm: React.FC<AddTodoFormProps> = ({ addTodo, setTodos }) => {
   return (
     <form>
       <input type='text' onChange={handleCahnge} value={newTodo} />
-      <button onClick={handleSubmit}>add todo</button>
-      <button onClick={deleteList}>삭제</button>
+      <Button clickEvent={handleSubmit}>add todo</Button>
+      <Button clickEvent={deleteList}>삭제</Button>
     </form>
   );
 };

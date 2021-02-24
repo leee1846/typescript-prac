@@ -6,3 +6,5 @@ type Todo = {
 type ToggleTodo = (clickedIndex: number) => void;
 
 type AddTodo = (newTodo: string) => void;
+
+type ButtonClick = (e: FormEvent<HTMLButtonElement>) => void;
